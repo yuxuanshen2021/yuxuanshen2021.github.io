@@ -1,0 +1,67 @@
+media:
+  input: images/birds
+  output: /images/birds
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: barcelona-birds
+    label: Barcelona Birds
+    type: collection
+    path: data/barcelona
+    format: json
+    filename: "{primary}.json"
+
+    view:
+      primary: english_name
+
+    fields:
+      - name: english_name
+        label: English name
+        type: string
+        required: true
+
+      - name: chinese_name
+        label: Chinese name
+        type: string
+
+      - name: scientific_name
+        label: Scientific name
+        type: string
+
+      - name: location
+        label: Observation location
+        type: string
+        required: true
+
+      - name: date
+        label: Observation date
+        type: date
+        required: true
+
+      - name: cover
+        label: Cover image
+        type: image
+        required: true
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+      - name: gallery
+        label: Gallery images
+        type: image
+        options:
+          multiple:
+            max: 30
+          unique: true
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+      - name: youtube
+        label: YouTube video link
+        type: string
+        description: Paste the complete YouTube URL here.
+
+      - name: notes
+        label: Observation notes
+        type: text
