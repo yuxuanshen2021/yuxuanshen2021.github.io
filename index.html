@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuxuan's Birding Journal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f0e6;
+      color: #29332b;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 6%;
+      border-bottom: 1px solid #bdc3b7;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 30px;
+    }
+
+    nav a {
+      color: #29332b;
+      margin-left: 28px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #a85d3b;
+    }
+
+    .hero {
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 70px 12%;
+    }
+
+    .label {
+      color: #a85d3b;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-family: Georgia, serif;
+      font-size: 76px;
+      font-weight: normal;
+      line-height: 0.95;
+    }
+
+    .intro {
+      max-width: 430px;
+      color: #657064;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button {
+      width: fit-content;
+      margin-top: 25px;
+      padding: 16px 24px;
+      background: #354739;
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero-photo {
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(53, 71, 57, 0.15), rgba(53, 71, 57, 0.15)),
+        url("images/cover.jpg") center/cover;
+    }
+
+    section {
+      padding: 100px 6%;
+    }
+
+    h2 {
+      margin: 10px 0 45px;
+      font-family: Georgia, serif;
+      font-size: 48px;
+      font-weight: normal;
+    }
+
+    .regions {
+      background: #354739;
+      color: #f4f0e6;
+    }
+
+    .regions h2 {
+      color: white;
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .region-card {
+      padding: 35px;
+      border: 1px solid #839183;
+    }
+
+    .region-card h3 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: normal;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .bird-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #d8d8cc;
+    }
+
+    .bird-card h3 {
+      margin-bottom: 5px;
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+    }
+
+    .bird-card p {
+      color: #748074;
+      line-height: 1.5;
+    }
+
+    .about {
+      border-top: 1px solid #bdc3b7;
+    }
+
+    .about p {
+      max-width: 720px;
+      color: #5d685e;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 6%;
+      background: #27362b;
+      color: white;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav a {
+        margin: 0 20px 0 0;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        padding: 70px 7%;
+      }
+
+      h1 {
+        font-size: 54px;
+      }
+
+      .hero-photo {
+        min-height: 450px;
+      }
+
+      .region-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Yuxuan's Birding Journal</div>
+
+    <nav>
+      <a href="#gallery">Gallery</a>
+      <a href="#regions">Regions</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="label">A personal field journal</div>
+        <h1>Small wings,<br>wide worlds.</h1>
+
+        <p class="intro">
+          Birds observed across trails, wetlands and city edges—from
+          Bavaria to the Camino and beyond.
+        </p>
+
+        <a class="button" href="#gallery">Explore sightings →</a>
+      </div>
+
+      <div class="hero-photo"></div>
+    </section>
+
+    <section class="regions" id="regions">
+      <div class="label">Explore by place</div>
+      <h2>Every region holds a different chorus.</h2>
+
+      <div class="region-grid">
+        <article class="region-card">
+          <h3>Germany</h3>
+          <p>Bavaria · Lakes · City parks</p>
+        </article>
+
+        <article class="region-card">
+          <h3>Spain</h3>
+          <p>Camino · Galicia · Atlantic coast</p>
+        </article>
+
+        <article class="region-card">
+          <h3>China</h3>
+          <p>More observations coming soon</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="label">Selected sightings</div>
+      <h2>Notes from the field</h2>
+
+      <div class="gallery-grid">
+        <article class="bird-card">
+          <img src="images/bird-1.jpg" alt="Bird photographed in Germany">
+          <h3>Bird name</h3>
+          <p>Munich, Germany · Date</p>
+        </article>
+
+        <article class="bird-card">
+          <img src="images/bird-2.jpg" alt="Bird photographed in Spain">
+          <h3>Bird name</h3>
+          <p>Galicia, Spain · Date</p>
+        </article>
+
+        <article class="bird-card">
+          <img src="images/bird-3.jpg" alt="Bird observation">
+          <h3>Bird name</h3>
+          <p>Location · Date</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="label">Behind the lens</div>
+      <h2>Watching closely, walking slowly.</h2>
+
+      <p>
+        I'm Yuxuan, a researcher and amateur bird photographer based in
+        Munich. This journal records birds encountered while hiking,
+        travelling and exploring everyday green spaces.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Yuxuan's Birding Journal</span>
+    <span>Munich · 2026</span>
+  </footer>
+</body>
+</html>
