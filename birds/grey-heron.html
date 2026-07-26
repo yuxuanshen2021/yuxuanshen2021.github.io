@@ -105,20 +105,41 @@
       font-weight: normal;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .gallery-title {
+      margin: 50px 0 22px;
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: normal;
     }
 
-    .gallery img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 650px;
-      object-fit: contain;
-      background: #27362b;
+    .landscape-gallery,
+    .portrait-gallery {
+    display: grid;
+    gap: 20px;
     }
+
+.landscape-gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.landscape-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.portrait-gallery {
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  justify-content: center;
+}
+
+.portrait-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
 
     .video-section {
       padding: 75px 6% 100px;
@@ -158,11 +179,12 @@
     }
 
     @media (max-width: 900px) {
-      .gallery {
+      .landscape-gallery,
+      .portrait-gallery {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
+    
     @media (max-width: 650px) {
       header {
         align-items: flex-start;
@@ -178,14 +200,16 @@
         font-size: 48px;
       }
 
-      .gallery {
-        grid-template-columns: 1fr;
+      .landscape-gallery,
+      .portrait-gallery {
+      grid-template-columns: 1fr;
       }
 
-      .gallery img {
-        height: auto;
+      .portrait-gallery {
+      max-width: 420px;
+      margin: 0 auto;
       }
-
+      
       footer {
         flex-direction: column;
         gap: 8px;
@@ -219,12 +243,17 @@
         This individual was photographed in Barcelona.
       </p>
 
-      <div class="details">
         <div class="detail">
-          <strong>Location</strong>
-        2026/07/22 Diagonal-Mar, Barcelona, Spain
+        <strong>Date</strong>
+        22 July 2026
         </div>
 
+        <div class="detail">
+        <strong>Location</strong>
+        Diagonal Mar, Barcelona, Spain
+        </div>
+
+        
         <div class="detail">
           <strong>Species</strong>
           Grey Heron
@@ -241,19 +270,25 @@
       <div class="label">Field photographs</div>
       <h2>Photo Gallery</h2>
 
-      <div class="gallery">
-        <img src="../images/barcelona/grey-heron/DSCN3133.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3137.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3138.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3139.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3147.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3148.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3151.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3152.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3158.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3161.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3162.JPG" alt="Grey Heron in Barcelona">
-        <img src="../images/barcelona/grey-heron/DSCN3166.JPG" alt="Grey Heron in Barcelona">
+        <h3 class="gallery-title">Landscape Photographs</h3>
+        <div class="landscape-gallery">
+          <img src="../images/barcelona/grey-heron/DSCN3138.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3139.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3147.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3151.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3152.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3158.JPG" alt="Grey Heron at Diagonal Mar">
+        </div>
+
+        <h3 class="gallery-title">Portrait Photographs</h3>
+
+        <div class="portrait-gallery">
+          <img src="../images/barcelona/grey-heron/DSCN3133.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3137.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3148.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3161.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3162.JPG" alt="Grey Heron at Diagonal Mar">
+          <img src="../images/barcelona/grey-heron/DSCN3166.JPG" alt="Grey Heron at Diagonal Mar">
       </div>
     </section>
 
