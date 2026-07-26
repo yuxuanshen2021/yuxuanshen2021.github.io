@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Monk Parakeet | Yuxuan's Birding Journal</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f0e6;
+      color: #29332b;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 6%;
+      border-bottom: 1px solid #bdc3b7;
+    }
+
+    .logo {
+      color: #29332b;
+      font-family: Georgia, serif;
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 28px;
+      color: #29332b;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #a85d3b;
+    }
+
+    .hero {
+      padding: 80px 6%;
+    }
+
+    .label {
+      color: #a85d3b;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 8px;
+      font-family: Georgia, serif;
+      font-size: 68px;
+      font-weight: normal;
+    }
+
+    .scientific-name {
+      margin: 0 0 28px;
+      color: #657064;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: #59645a;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(140px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin-top: 38px;
+      padding-top: 25px;
+      border-top: 1px solid #bdc3b7;
+    }
+
+    .detail {
+      line-height: 1.5;
+    }
+
+    .detail strong {
+      display: block;
+      margin-bottom: 9px;
+      color: #a85d3b;
+      font-size: 12px;
+      font-weight: normal;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .gallery-section {
+      padding: 75px 6% 100px;
+      background: #354739;
+      color: #f4f0e6;
+    }
+
+    h2 {
+      margin: 12px 0 40px;
+      font-family: Georgia, serif;
+      font-size: 46px;
+      font-weight: normal;
+    }
+
+    .gallery-title {
+      margin: 50px 0 22px;
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: normal;
+    }
+
+    .landscape-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .landscape-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .video-section {
+      padding: 75px 6% 100px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      padding-top: 56.25%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 45px;
+      color: #a85d3b;
+      text-decoration: none;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 6%;
+      background: #27362b;
+      color: white;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .details {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .landscape-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav a {
+        margin: 0 20px 0 0;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .details {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .landscape-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="../index.html">Yuxuan's Birding Journal</a>
+
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../regions/spain.html">Spain</a>
+      <a href="../regions/barcelona.html">Barcelona</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="label">Barcelona bird observation</div>
+
+      <h1>Monk Parakeet</h1>
+      <p class="scientific-name">
+        Myiopsitta monachus · 和尚鹦鹉（灰胸鹦鹉）
+      </p>
+
+      <p class="intro">
+        The Monk Parakeet is a small, sociable parrot native to South America.
+        It is easily recognized by its bright green plumage, grey face and
+        breast, and noisy calls. Unlike most parrots, it builds large communal
+        stick nests, often in palm trees. These individuals were photographed
+        in Parc de la Ciutadella, Barcelona.
+      </p>
+
+      <div class="details">
+        <div class="detail">
+          <strong>Date</strong>
+          22 July 2026
+        </div>
+
+        <div class="detail">
+          <strong>Location</strong>
+          Parc de la Ciutadella, Barcelona, Spain
+        </div>
+
+        <div class="detail">
+          <strong>Species</strong>
+          Monk Parakeet
+        </div>
+
+        <div class="detail">
+          <strong>Scientific name</strong>
+          <em>Myiopsitta monachus</em>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="label">Field photographs</div>
+      <h2>Photo Gallery</h2>
+
+      <h3 class="gallery-title">Monk Parakeets in Parc de la Ciutadella</h3>
+
+      <div class="landscape-gallery">
+        <img src="../images/barcelona/monk-parakeet/DSCN2944.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2950.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2959.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2962.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2968.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2972.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2975.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2984.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2987.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2994.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2995.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2996.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2998.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN2999.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3002.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3003.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3005.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3006.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3012.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3015.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3016.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3017.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3030.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3031.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3032.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3036.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3038.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3039.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3043.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3050.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3053.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3061.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3062.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+        <img src="../images/barcelona/monk-parakeet/DSCN3065.JPG" alt="Monk Parakeet in Parc de la Ciutadella">
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="label">Field video</div>
+      <h2>Monk Parakeets in Barcelona</h2>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/hn9WSHxajh4"
+          title="Monk Parakeets in Parc de la Ciutadella, Barcelona"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <a class="back-link" href="../regions/barcelona.html">
+        ← Back to Barcelona
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <span>Yuxuan's Birding Journal</span>
+    <span>Monk Parakeet · Barcelona</span>
+  </footer>
+</body>
+</html>
