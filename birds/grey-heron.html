@@ -243,21 +243,51 @@
         This individual was photographed in Barcelona.
       </p>
 
-        <div class="detail">
-        <strong>Date and Location</strong>
-        2026/07/22 Diagonal-Mar, Barcelona, Spain
-        </div>
-        
-        <div class="detail">
-          <strong>Species</strong>
-          Grey Heron
+      .details {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(140px, 1fr));
+        gap: 30px;
+        max-width: 900px;
+        margin-top: 38px;
+        padding-top: 25px;
+        border-top: 1px solid #bdc3b7;
+      }
+
+    .detail {
+        line-height: 1.5;
+    }
+
+    .detail strong {
+        display: block;
+        margin-bottom: 9px;
+        color: #a85d3b;
+        font-size: 12px;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    <div class="details">
+      <div class="detail">
+        <strong>Date</strong>
+        22 July 2026
         </div>
 
-        <div class="detail">
-          <strong>Scientific name</strong>
-          Ardea cinerea
-        </div>
+      <div class="detail">
+        <strong>Location</strong>
+        Diagonal Mar, Barcelona, Spain
       </div>
+
+      <div class="detail">
+        <strong>Species</strong>
+        Grey Heron
+      </div>
+
+      <div class="detail">
+        <strong>Scientific name</strong>
+        <em>Ardea cinerea</em>
+      </div>
+    </div>
     </section>
 
     <section class="gallery-section">
