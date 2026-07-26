@@ -137,15 +137,21 @@
       padding: 75px 6% 100px;
     }
 
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+    }
+    
     .video-wrapper {
       position: relative;
       width: 100%;
-      max-width: 1000px;
-      padding-top: 56.25%;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
       background: #000;
     }
-
+    
     .video-wrapper iframe {
       position: absolute;
       inset: 0;
@@ -153,6 +159,7 @@
       height: 100%;
       border: 0;
     }
+
 
     .back-link {
       display: inline-block;
@@ -181,6 +188,10 @@
     }
 
     @media (max-width: 650px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    
       header {
         align-items: flex-start;
         flex-direction: column;
@@ -311,13 +322,24 @@
       <div class="label">Field video</div>
       <h2>Monk Parakeets in Barcelona</h2>
 
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/hn9WSHxajh4"
-          title="Monk Parakeets in Parc de la Ciutadella, Barcelona"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+      <div class="video-grid">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/hn9WSHxajh4"
+            title="Monk Parakeets in Barcelona — Video 1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/CgOUj84-dLs"
+            title="Monk Parakeets in Barcelona — Video 2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
 
       <a class="back-link" href="../regions/barcelona.html">
